@@ -80,12 +80,7 @@ public class RequestHelper {
 			// request body
 
 			// ex. You enter the following URL in Postman:
-			// http://localhost:9001/HelloServlets/register
-			// body would have this format: { "name": "Sam Rose", "jobTitle": "Chef",
-			// "hiredate": "2019-11-18"}
-			// info[]: ["name: bob", "jobTitle: worker", "hiredate: 2022-08-18"]
-			// ex. name=bob
-			// result: values["name:bob", etc.]
+			// http://localhost:8080/FoundationalProject/register
 
 			for (String pair : info) {
 				LOGGER.info("Original body K/V pair: " + pair.trim());

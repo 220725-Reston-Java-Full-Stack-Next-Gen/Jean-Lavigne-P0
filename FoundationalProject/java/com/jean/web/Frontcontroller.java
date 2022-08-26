@@ -35,7 +35,7 @@ public class Frontcontroller extends HttpServlet{
 				RequestHelper.processLogout(req, resp);
 				break;
 			case "searching by unsername":
-				LOGGER.info("User is trying to srach by username...");
+				LOGGER.info("User is trying to reach by his own name fam...");
 				RequestHelper.processSearchByUsername(req, resp);
 				break;
 			case "accounts/new":
@@ -43,15 +43,15 @@ public class Frontcontroller extends HttpServlet{
 				RequestHelper.processAddeNewReimbursement(req, resp);
 				break;
 			default:
-				LOGGER.warn("No path present: " + URI);
+				LOGGER.info("No path over here ya fool: " + URI);
 				break;
 		}
 	}
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		//we use URI rewriting to better manage the naviagation of our HTTP requests as they come to the FrontController
-		final String URI = req.getRequestURI().replace("/FakeProject1Scraper/", "");
+		//we use URI rewriting to better manage the navigation of our HTTP requests as they come to the FrontController
+		final String URI = req.getRequestURI().replace("/FoundationalProject/", "");
 		
 		LOGGER.info("User trying to access endpoint: " + URI);
 		
